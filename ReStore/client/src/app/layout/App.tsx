@@ -1,7 +1,8 @@
-import { Typography } from "@material-ui/core";
+import { Container, CssBaseline, Typography } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import Catalog from "../../features/Catalog/Catalog";
 import { Product } from "../models/product";
+import Header from "./Header";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -27,8 +28,11 @@ function App() {
   }
   return (
     <>
-      <Typography variant="h1">Re-Store</Typography>
-      <Catalog products={products} addProduct={addProduct} />
+      <CssBaseline />
+      <Header />
+      <Container>
+        <Catalog products={products} addProduct={addProduct} />
+      </Container>
     </>
   );
 }
