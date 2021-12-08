@@ -7,7 +7,6 @@ import {
   CardContent,
   CardHeader,
   CardMedia,
-  createTheme,
   makeStyles,
   Typography,
 } from "@material-ui/core";
