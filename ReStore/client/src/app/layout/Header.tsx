@@ -12,7 +12,6 @@ import {
 } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
 import MenuIcon from "@material-ui/icons/Menu";
-import { title } from "process";
 import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles({
