@@ -1,10 +1,12 @@
 import {
   AppBar,
+  IconButton,
   makeStyles,
   Switch,
   Toolbar,
   Typography,
 } from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
 
 const useStyles = makeStyles({
   root: {
@@ -26,9 +28,14 @@ export default function Header({ darkMode, handleThemeChange }: Props) {
   return (
     <AppBar position="static" className={classes.root}>
       <Toolbar>
-        <Typography variant="h6">RE-STORE</Typography>
+        <IconButton edge="start" color="inherit" aria-label="menu">
+          <MenuIcon />
+        </IconButton>
+        <Typography className={classes.toggle} variant="h6">
+          RE-STORE
+        </Typography>
+        <Switch checked={darkMode} onChange={handleThemeChange} />
       </Toolbar>
-      <Switch checked={darkMode} onChange={handleThemeChange} />
     </AppBar>
   );
 }
